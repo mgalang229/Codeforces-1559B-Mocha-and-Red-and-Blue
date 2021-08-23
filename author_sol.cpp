@@ -22,13 +22,13 @@ int main() {
 			s[0] = 'R';
 		}
 		// view the image in this repository for better understanding
-		// create pattern wherein the question marks depend on the letter from the left adjacent side
+		// create a pattern wherein the question marks depend on the letter from the left adjacent side
 		for (int i = 1; i < n; i++) {
 			if (s[i] == '?' && s[i - 1] != '?') {
 				s[i] = s[i - 1] ^ ('B' ^ 'R');
 			}
 		}
-		// create pattern wherein the question marks depend on the letter from the right adjacent side
+		// create a pattern wherein the question marks depend on the letter from the right adjacent side
 		for (int i = n - 2; i >= 0; i--) {
 			if (s[i] == '?' && s[i + 1] != '?') {
 				s[i] = s[i + 1] ^ ('B' ^ 'R');
